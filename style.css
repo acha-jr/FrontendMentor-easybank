@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  font-family: "Public Sans", sans-serif;
+}
+body {
+  background: var(--very-light-gray);
+  overflow-x: hidden;
+}
+
+button {
+  font-weight: 700;
+  width: 163px;
+  height: 45px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 0.6;
+}
+
+/* Header */
+header {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 20px 150px;
+  padding-bottom: 0;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+nav {
+  display: flex;
+  justify-self: center;
+  width: 330px;
+  justify-content: space-between;
+  color: var(--grayish-blue);
+  font-size: 14px;
+}
+nav p {
+  cursor: pointer;
+  display: grid;
+  position: relative;
+  line-height: 70px;
+}
+nav p span {
+  width: 100%;
+  position: absolute;
+  height: 3px;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  opacity: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+nav p:hover span {
+  opacity: 1;
+}
+header button {
+  justify-self: right;
+  margin-right: 15px;
+}
+
+/* Intro */
+.intro {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: 150px;
+  margin-right: 165px;
+}
+.intro .text {
+  margin-top: 175px;
+  width: 40%;
+  grid-column: 1;
+}
+.intro .text h1 {
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--dark-blue);
+}
+.intro .text p {
+  margin-top: 30px;
+  font-size: 17px;
+  line-height: 1.75rem;
+  font-weight: 300;
+  color: var(--grayish-blue);
+}
+.intro .text button {
+  margin-top: 40px;
+}
+.hero {
+  position: relative;
+  top: -100px;
+  right: -29%;
+}
+.hero img:nth-child(1) {
+  top: -160px;
+  right: -29%;
+  z-index: -2;
+}
+.hero img:nth-child(2) {
+  top: -30px;
+  right: 0;
+  z-index: -1;
+}
+.hero img {
+  position: absolute;
+}
+
+/* Section Two */
+.part-two {
+  background: var(--light-grayish-blue);
+  width: 100%;
+  margin-top: 170px;
+  padding: 107px 150px;
+  position: relative;
+  z-index: -2;
+}
+.part-two h2 {
+  font-size: 35px;
+  font-weight: 300;
+  color: var(--dark-blue);
+}
+.part-two p {
+  font-weight: 300;
+  color: var(--grayish-blue);
+  margin-top: 30px;
+  width: 50%;
+  line-height: 1.5rem;
+  font-size: 17px;
+}
+.offers {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin-top: 75px;
+}
+.offers article h3 {
+  margin-top: 40px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+.offers article p {
+  width: 90%;
+  font-size: 15px;
+}
+
+/* Section Three */
+.part-three {
+  padding: 90px 150px 75px 150px;
+}
+.part-three h2 {
+  font-size: 35px;
+  font-weight: 300;
+  color: var(--dark-blue);
+}
+.articles {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+.articles article {
+  width: 90%;
+  background: var(--white);
+  border-radius: 5px;
+}
+.articles article img {
+  width: 100%;
+  height: 50%;
+  border-radius: 5px 5px 0 0;
+}
+.articles article .text {
+  padding: 10%;
+}
+.articles article .text h6 {
+  color: var(--grayish-blue);
+  font-weight: 300;
+}
+.articles article .text h4 {
+  margin-top: 12px;
+  font-weight: 300;
+  color: var(--dark-blue);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.articles article .text h4:hover {
+  color: hsl(157, 64%, 46%);
+}
+.articles article .text p {
+  font-weight: 300;
+  color: var(--grayish-blue);
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  padding: 45px 150px 45px 150px;
+  background: var(--dark-blue);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  line-height: 32px;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.3s;
+}
+ul li:hover {
+  color: hsl(157, 64%, 46%);
+}
+.social {
+  margin-top: 50px;
+  font-size: 20px;
+  width: 139px;
+  display: flex;
+  justify-content: space-between;
+}
+.social i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.social i:hover {
+  color: hsl(157, 64%, 46%);
+}
+.four {
+  justify-self: right;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: right;
+  color: var(--grayish-blue);
+  display: grid;
+}
+.cheat {
+  position: relative;
+  background: var(--white);
+  display: grid;
+  justify-content: right;
+  width: 163px;
+  height: 45px;
+  border-radius: 25px;
+  justify-self: right;
+}
+.four p {
+  margin-top: 30px;
+}
+.attribution {
+  margin-top: 50px;
+  font-size: 11px;
+  grid-area: 2 / 1 / span 1 / span 4;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(157, 64%, 46%);
+  text-decoration: none;
+}
+menu {
+  position: relative;
+  display: none;
+}
+#menu,
+#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 375px) and (max-width: 990px) {
+  header {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+  }
+  nav {
+    width: 90%;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    background: var(--white);
+    top: 80px;
+    border-radius: 5px;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  nav p {
+    line-height: 35px;
+    font-size: 17px;
+    color: var(--dark-blue);
+  }
+  header button {
+    display: none;
+  }
+  menu {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    grid-area: 1/3;
+    justify-self: right;
+  }
+  .inactive {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .intro {
+    display: block;
+    margin: 0;
+  }
+  .hero {
+    position: relative;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  .hero img:nth-child(1) {
+    content: url(./images/bg-intro-mobile.svg);
+    top: 0;
+    right: 0;
+    width: 100%;
+    position: relative;
+  }
+  .hero img:nth-child(2) {
+    width: 100%;
+    top: -80px;
+    right: 0;
+  }
+  .intro .text {
+    margin: 0px auto;
+    margin-top: 0px;
+    text-align: center;
+    width: 100%;
+  }
+  .intro .text h1 {
+    font-size: 40px;
+  }
+
+  .part-two {
+    text-align: center;
+    margin-top: 90px;
+    padding: 0;
+    padding-top: 70px;
+  }
+  .part-two p {
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .part-two .offers {
+    grid-template-columns: auto;
+    margin-top: 0px;
+  }
+  .offers article {
+    margin-top: 40px;
+  }
+  .offers article h3 {
+    margin-top: 30px;
+  }
+  .offers article p {
+    margin: 0px auto;
+    margin-top: 25px;
+    width: 90%;
+  }
+
+  .part-three {
+    padding: 0;
+    padding-top: 95px;
+    text-align: center;
+  }
+  .part-three .articles {
+    grid-template-columns: auto;
+  }
+  .articles article {
+    margin: 0px auto;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  footer {
+    padding: 10%;
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  .social {
+    align-items: center;
+    margin: 0px auto;
+    margin-top: 30px;
+    width: 160px;
+    font-size: 22px;
+  }
+  .two {
+    margin-top: 30px;
+  }
+  ul li {
+    line-height: 35px;
+  }
+  .four {
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 30px;
+  }
+  .cheat {
+    justify-self: center;
+  }
+  .attribution {
+    grid-area: auto;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 990px) {
+  .intro .text {
+    width: 80%;
+  }
+  .part-two p {
+    width: 80%;
+  }
+  .offers article p {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1276px) {
+  .articles article .text {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1221px) {
+  .part-three {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .articles article .text p {
+    margin-top: 5px;
+    font-size: 11px;
+  }
+  .articles article .text h4 {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
